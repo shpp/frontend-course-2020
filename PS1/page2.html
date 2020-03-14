@@ -12,11 +12,13 @@
     label {
       display: inline-block;
       text-align: right;
+      cursor: pointer;
       padding-right: 10px;
       vertical-align: top;
     }
     label:first-child { width: 40%; }
     input[type=checkbox] { display: none; }
+    input:invalid { outline-color: red }
     label:last-child { text-align: left; }
     input[type=submit] {
       display: flex;
@@ -45,8 +47,8 @@
   <fieldset>
     <legend>Информация про вас</legend>
     <div class="control">
-      <label>Год вашего рождения</label>
-      <input>
+      <label for="bday">Год вашего рождения</label>
+      <input type="number" min="1930" max="2020" id="bday">
     </div>
     <div class="control">
       <label>Расскажите о своих увлечениях</label>
