@@ -9,13 +9,15 @@
     body {
       background-image: url("images/p3-bg.png");
       font-family: 'Roboto', 'Arial', sans-serif;
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
     }
     header {
       position: fixed;
       width: calc(100% - 40px);
       padding: 20px;
       background: #222222;
-      z-index: 1;
       color: white;
     }
     footer {
@@ -40,7 +42,11 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    main { position: relative }
+    main {
+      position: relative;
+      padding-top: 84px;
+      flex-grow: 1;
+    }
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -69,14 +75,44 @@
       background-color: white;
       border-radius: 10px;
     }
+    .x {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      margin: 0;
+      padding: 0;
+      width: 20px;
+      height: 25px;
+      font-size: 20px;
+
+    }
     .team {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
+      max-height: 500px;
+      overflow: scroll;
     }
     .person {
-      width: 26%;
-      margin-bottom: 20px;
+      width: 230px;
+      height: 230px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .person img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+    }
+    .person:hover:after {
+      content: attr(data-name);
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      right: 0;
+      text-align: center;
     }
     footer nav {
       display: flex;
@@ -114,28 +150,28 @@
     <button id="show">Дізнатись більше про нас</button>
   </div>
   <div id="modal" class="hidden">
-    <h2>Наша супер-команда</h2>
+    <h2>Наша супер-команда <button class="hide x">x</button></h2>
     <div class="team">
-      <img src="https://loremflickr.com/100/80?lock=1" class="person" data-name="Pauline R. Skiles">
-      <img src="https://loremflickr.com/100/80?lock=2" class="person" data-name="Barbara T. Francisco">
-      <img src="https://loremflickr.com/100/80?lock=3" class="person" data-name="Anna R. Jones">
-      <img src="https://loremflickr.com/100/80?lock=4" class="person" data-name="Ralph G. Gardner">
-      <img src="https://loremflickr.com/100/80?lock=5" class="person" data-name="Brain A. Prim">
-      <img src="https://loremflickr.com/100/80?lock=6" class="person" data-name="George M. Proffitt">
-      <img src="https://loremflickr.com/100/80?lock=7" class="person" data-name="Karen S. Carter">
-      <img src="https://loremflickr.com/100/80?lock=8" class="person" data-name="James P. Russo">
-      <img src="https://loremflickr.com/100/80?lock=9" class="person" data-name="Rebecca J. Giordano">
-      <img src="https://loremflickr.com/100/80?lock=10" class="person" data-name="Thomas P. Swett">
-      <img src="https://loremflickr.com/100/80?lock=11" class="person" data-name="Tiffany N. Gardner">
-      <img src="https://loremflickr.com/100/80?lock=12" class="person" data-name="Jessica D. Musgrove">
-      <img src="https://loremflickr.com/100/80?lock=13" class="person" data-name="Henry B. Johnson">
-      <img src="https://loremflickr.com/100/80?lock=14" class="person" data-name="Edward T. Tovar">
-      <img src="https://loremflickr.com/100/80?lock=15" class="person" data-name="Jacqueline G. Robles">
-      <img src="https://loremflickr.com/100/80?lock=16" class="person" data-name="Betty D. Phillips">
-      <img src="https://loremflickr.com/100/80?lock=17" class="person" data-name="William C. Baker">
-      <img src="https://loremflickr.com/100/80?lock=18" class="person" data-name="Lauren D. Baize">
-      <img src="https://loremflickr.com/100/80?lock=19" class="person" data-name="Terry S. Nelson">
-      <img src="https://loremflickr.com/100/80?lock=20" class="person" data-name="Dorothy D. Battaglia">
+      <div class="person" data-name="Pauline R. Skiles"><img src="https://loremflickr.com/100/80?lock=1" alt="Pauline R. Skiles"></div>
+      <div class="person" data-name="Barbara T. Francisco"><img src="https://loremflickr.com/100/80?lock=2" alt="Barbara T. Francisco"></div>
+      <div class="person" data-name="Anna R. Jones"><img src="https://loremflickr.com/100/80?lock=3" alt="Anna R. Jones"></div>
+      <div class="person" data-name="Ralph G. Gardner"><img src="https://loremflickr.com/100/80?lock=4" alt="Ralph G. Gardner"></div>
+      <div class="person" data-name="Brain A. Prim"><img src="https://loremflickr.com/100/80?lock=5" alt="Brain A. Prim"></div>
+      <div class="person" data-name="George M. Proffitt"><img src="https://loremflickr.com/100/80?lock=6" alt="George M. Proffitt"></div>
+      <div class="person" data-name="Karen S. Carter"><img src="https://loremflickr.com/100/80?lock=7" alt="Karen S. Carter"></div>
+      <div class="person" data-name="James P. Russo"><img src="https://loremflickr.com/100/80?lock=8" alt="James P. Russo"></div>
+      <div class="person" data-name="Rebecca J. Giordano"><img src="https://loremflickr.com/100/80?lock=9" alt="Rebecca J. Giordano"></div>
+      <div class="person" data-name="Thomas P. Swett"><img src="https://loremflickr.com/100/80?lock=10" alt="Thomas P. Swett"></div>
+      <div class="person" data-name="Tiffany N. Gardner"><img src="https://loremflickr.com/100/80?lock=11" alt="Tiffany N. Gardner"></div>
+      <div class="person" data-name="Jessica D. Musgrove"><img src="https://loremflickr.com/100/80?lock=12" alt="Jessica D. Musgrove"></div>
+      <div class="person" data-name="Henry B. Johnson"><img src="https://loremflickr.com/100/80?lock=13" alt="Henry B. Johnson"></div>
+      <div class="person" data-name="Edward T. Tovar"><img src="https://loremflickr.com/100/80?lock=14" alt="Edward T. Tovar"></div>
+      <div class="person" data-name="Jacqueline G. Robles"><img src="https://loremflickr.com/100/80?lock=15" alt="Jacqueline G. Robles"></div>
+      <div class="person" data-name="Betty D. Phillips"><img src="https://loremflickr.com/100/80?lock=16" alt="Betty D. Phillips"></div>
+      <div class="person" data-name="William C. Baker"><img src="https://loremflickr.com/100/80?lock=17" alt="William C. Baker"></div>
+      <div class="person" data-name="Lauren D. Baize"><img src="https://loremflickr.com/100/80?lock=18" alt="Lauren D. Baize"></div>
+      <div class="person" data-name="Terry S. Nelson"><img src="https://loremflickr.com/100/80?lock=19" alt="Terry S. Nelson"></div>
+      <div class="person" data-name="Dorothy D. Battaglia"><img src="https://loremflickr.com/100/80?lock=20" alt="Dorothy D. Battaglia"></div>
     </div>
     <button class="hide">Крута у вас команда!</button>
   </div>
