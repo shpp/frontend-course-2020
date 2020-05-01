@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ua">
 <head>
   <title>SPAGHETTI.ua - Макарони додому</title>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="SPAGHETTI.ua, спагетті, лапша, вермішель, макарони, безкоштовна доставка,
-  макароны, спагетти, вермишель, бесплатная доставка">
+  <meta name="description" content="SPAGHETTI.ua, купити, спагетті, лапша, вермішель, макарони, безкоштовна доставка,
+  Інтернет-магазин, Интернет-магазин, купить, макароны, спагетти, вермишель, бесплатная доставка">
   <meta name="robots" content="index, follow" />
+
+  <!--Open graph meta-tags-->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/page1.html">
+  <meta property="og:title" content="SPAGHETTI.ua - Макарони додому">
+  <meta property="og:description" content="SPAGHETTI.ua - Макарони додому Безкоштовна доставка в радіусі 5км!">
+  <meta property="og:url" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/page1.html">
+  <meta property="og:locale" content="ua_UA">
+  <meta property="og:image" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/images/pasta.jpg">
+  <meta property="og:image:width" content="968">
+  <meta property="og:image:height" content="504">
+
+  <!--Twitter meta-tags-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SPAGHETTI.ua - Макарони додому">
+  <meta name="twitter:description" content="SPAGHETTI.ua - Макарони додому Безкоштовна доставка в радіусі 5км!">
+  <meta name="twitter:image:src" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/images/pasta.jpg">
+  <meta name="twitter:url" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/page1.html">
+  <meta name="twitter:domain" content="dmitrishinbv.github.io">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@...">
+
+  <!--Favicon tags-->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
@@ -23,27 +48,22 @@
   <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
   <link rel="manifest" href="ico/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/page1.html">
-  <meta property="og:title" content="SPAGHETTI.ua - Макарони додому">
-  <meta property="og:description" content="SPAGHETTI.ua - Макарони додому Безкоштовна доставка в радіусі 5км!">
-  <meta property="og:url" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/page1.html">
-  <meta property="og:locale" content="ua_UA">
-  <meta property="og:image" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/images/pasta.jpg">
-  <meta property="og:image:width" content="968">
-  <meta property="og:image:height" content="504">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SPAGHETTI.ua - Макарони додому">
-  <meta name="twitter:description" content="SPAGHETTI.ua - Макарони додому Безкоштовна доставка в радіусі 5км!">
-  <meta name="twitter:image:src" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/images/pasta.jpg">
-  <meta name="twitter:url" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/page1.html">
-  <meta name="twitter:domain" content="dmitrishinbv.github.io">
-  <meta name="twitter:site" content="@">
-  <meta name="twitter:creator" content="@...">
+
   <style>
+
+    body {
+      overflow: hidden;
+    }
+
+    .background {
+      top: 0;
+      left: 0;
+      position: fixed;
+      z-index: -1;
+      opacity: 0.8;
+      min-width: 100%;
+      height: 100%;
+    }
 
     .button {
       display: inline-block;
@@ -63,11 +83,15 @@
 
 
     .shadow {
-      text-shadow: 2px 2px black;
+      text-shadow: 3px 3px black;
     }
 
-    .text {
+    .heading {
       color: #c8f6a8;
+    }
+
+    .whiteText {
+      color: white;
     }
 
     .button:hover {
@@ -100,25 +124,23 @@
       display: inline-block;
       margin: 10px;
     }
-
-
   </style>
-</head>
-<body style="overflow: hidden;">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<img src="./images/pasta.jpg" style="top: 0; left: 0; position: fixed; z-index: -1; opacity: 0.8; min-width: 100%; height: 100%;">
-<header align="middle">
+</head>
+
+<body>
+<img class="background" src="./images/pasta.jpg" alt="pasta image">
+<header>
   <br>
-  <h1 style="color: white" class="shadow">SPAGHETTI.ua</h1>
+  <h1 class="shadow whiteText">SPAGHETTI.ua</h1>
   <hr>
   <button class="button">Меню</button>
   <button class="button">Доставка та оплата</button>
   <button class="button">Замовити</button>
 </header>
 <main>
-  <h1 class="shadow text">Макарони додому</h1>
-  <h3 class="shadow text">Безкоштовна доставка в радіусі 5км!</h3>
+  <h1 class="shadow heading">Макарони додому</h1>
+  <h3 class="shadow heading">Безкоштовна доставка в радіусі 5км!</h3>
 </main>
 <footer>
   <div><img width="20" src="./images/phone.svg" alt="phone icon">
