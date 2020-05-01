@@ -5,10 +5,11 @@
   <title>Работа с формами</title>
   <style>
 
-     form {
+    form {
       max-width: 600px;
       margin: 100px auto;
     }
+
     .control { margin-bottom: 10px;}
 
     label {
@@ -17,7 +18,9 @@
       padding-right: 10px;
       vertical-align: top;
     }
+
     label:first-child { width: 40%; }
+
     input[type=checkbox] { display: none; }
 
     input:invalid {
@@ -29,13 +32,16 @@
      }
 
     label:last-child { text-align: left; }
+
     input[type=submit] {
       display: flex;
       margin: 0 auto;
     }
+
     svg { cursor: pointer }
+
     [class^=notification] {
-      position: fixed;
+      position: relative;
       top: 10px;
       left: 0;
       right: 0;
@@ -97,7 +103,8 @@
     Please never ever look at this script while you are learning at level 1.
     You _don't need_ this for completing the task.
   */
-  d = document, d.querySelector("[type=submit]").onclick = () => notifications.appendChild((a = d.createElement('div'), a.classList.add(d.forms[0].reportValidity() ? 'notification-success' : 'notification-error'), a))
+  d = document, d.querySelector("[type=submit]").onclick = () => notifications.appendChild((a = d.createElement('div'), a.classList.add(d.forms[0].reportValidity() ?
+    'notification-success' : 'notification-error'), a))
 </script>
 </body>
 </html>
