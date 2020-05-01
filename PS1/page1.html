@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SPAGHETTI.ua - Макарони додому</title>
   <style>
+
     .button {
       display: inline-block;
       height: 30px;
@@ -28,6 +29,10 @@
       text-shadow: 2px 2px black;
     }
 
+    .text {
+      color: #c8f6a8;
+    }
+
     .button:hover {
       background-color: lightgrey;
       cursor: pointer
@@ -35,13 +40,14 @@
 
     main {
       text-align: center;
-      margin-top: 150px;
+      margin-top: 5%;
       font-size: 2rem;
       color: white;
     }
 
     footer {
       position: absolute;
+      left: 0;
       bottom: 0;
       width: 100%;
       background: rgba(255, 255, 255, .7);
@@ -52,26 +58,30 @@
       text-decoration: none;
     }
 
+
     footer div {
       display: inline-block;
       margin: 10px;
     }
+
+
   </style>
 </head>
-<body style="overflow: hidden; background-image: url('./images/pasta.jpg'); background-attachment: fixed;">
+<body style="overflow: hidden;">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<img src="./images/pasta.jpg" width="100%" style="position: absolute; z-index: -1">-->
+<img src="./images/pasta.jpg" style="top: 0; left: 0; position: fixed; z-index: -1; opacity: 0.8; min-width: 100%; height: 100%;">
 <header align="middle">
   <br>
-  <h1 style="color: white">SPAGHETTI.ua</h1>
+  <h1 style="color: white" class="shadow">SPAGHETTI.ua</h1>
   <hr>
   <button class="button">Меню</button>
   <button class="button">Доставка та оплата</button>
   <button class="button">Замовити</button>
 </header>
 <main>
-  <h1 class="shadow">Макарони додому</h1>
-  <h3 class="shadow">Безкоштовна доставка в радіусі 5км!</h3>
+  <h1 class="shadow text">Макарони додому</h1>
+  <h3 class="shadow text">Безкоштовна доставка в радіусі 5км!</h3>
 </main>
 <footer>
   <div><img width="20" src="./images/phone.svg" alt="phone icon">
