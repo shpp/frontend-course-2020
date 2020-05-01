@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
@@ -5,11 +6,58 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SPAGHETTI.ua - Макарони додому</title>
-</head>
-<body>
+  <style>
+    .button {
+      display: inline-block;
+      height: 30px;
+      width: 180px;
+      border-radius: 5px;
+      vertical-align: bottom;
+      text-align: center;
+      line-height: 30px;
+      background: white;
+    }
 
-</body>
-</html>
+    img {
+      margin-right: 5px;
+      vertical-align: bottom;
+    }
+
+
+    .shadow {
+      text-shadow: 2px 2px black;
+    }
+
+    .button:hover {
+      background-color: lightgrey;
+      cursor: pointer
+    }
+
+    main {
+      text-align: center;
+      margin-top: 150px;
+      font-size: 2rem;
+      color: white;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, .7);
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    footer div {
+      display: inline-block;
+      margin: 10px;
+    }
+  </style>
+</head>
 <body style="overflow: hidden; background-image: url('./images/pasta.jpg'); background-attachment: fixed;">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<img src="./images/pasta.jpg" width="100%" style="position: absolute; z-index: -1">-->
@@ -26,54 +74,11 @@
   <h3 class="shadow">Безкоштовна доставка в радіусі 5км!</h3>
 </main>
 <footer>
-  <div><img width="20" src="./images/phone.svg">+380 98 765 43 21</div>
-  <div><img width="20" src="./images/email.svg">buy@spaghetti.ua</div>
+  <div><img width="20" src="./images/phone.svg" alt="phone icon">
+    <a href="tel:+380 98 765 43 21">+380 98 765 43 21</a></div>
+  <div><img width="20" src="./images/email.svg" alt="email icon">
+    <a href="mailto:buy@spaghetti.ua">buy@spaghetti.ua</a></div>
 </footer>
-<style>
-  .button {
-    display: inline-block;
-    height: 30px;
-    width: 180px;
-    border-radius: 5px;
-    vertical-align: bottom;
-    text-align: center;
-    line-height: 30px;
-    background: white;
-  }
 
-  img {
-    margin-right: 5px;
-    vertical-align: bottom;
-  }
-
-
-  .shadow {
-    text-shadow: 2px 2px black;
-  }
-
-  .button:hover {
-    background-color: lightgrey;
-    cursor: pointer
-  }
-
-  main {
-    text-align: center;
-    margin-top: 150px;
-    font-size: 2rem;
-    color: white;
-  }
-
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, .7);
-    text-align: center;
-  }
-
-  footer div {
-    display: inline-block;
-    margin: 10px;
-  }
-</style>
 </body>
+</html>
