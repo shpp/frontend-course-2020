@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Работа с формами</title>
   <style>
-    form {
+
+     form {
       max-width: 600px;
       margin: 100px auto;
     }
@@ -18,6 +19,15 @@
     }
     label:first-child { width: 40%; }
     input[type=checkbox] { display: none; }
+
+    input:invalid {
+       border: 2px solid red;
+    }
+
+     input:focus, textarea:focus {
+       border: 1px solid #555;
+     }
+
     label:last-child { text-align: left; }
     input[type=submit] {
       display: flex;
@@ -46,12 +56,12 @@
   <fieldset>
     <legend>Информация про вас</legend>
     <div class="control">
-      <label>Год вашего рождения</label>
-      <input type="number" min="1890" max="2020" required autofocus>
+      <label for="birthYear">Год вашего рождения</label>
+      <input id="birthYear" type="number" min="1890" max="2020" required autofocus>
     </div>
     <div class="control">
-      <label>Расскажите о своих увлечениях</label>
-      <textarea cols="20" style="resize: vertical;"></textarea>
+      <label for="hobbies">Расскажите о своих увлечениях</label>
+      <textarea id="hobbies" cols="20" style="resize: vertical;"></textarea>
     </div>
     <div class="control">
       <label>Цвет ваших глаз</label>
@@ -60,8 +70,8 @@
       <input type="radio" name="eyesColor" id="brown" value="brown" required><label for="brown">Карий</label>
     </div>
     <div class="control">
-      <label>Ваша последняя домашка на п2п</label>
-      <input type="file" accept="application/zip">
+      <label for="homeWorkFile">Ваша последняя домашка на п2п</label>
+      <input id="homeWorkFile" type="file" accept="application/zip">
     </div>
     <div class="control">
       <label>Вам понравилось это задание?</label>
