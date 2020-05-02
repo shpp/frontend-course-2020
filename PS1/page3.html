@@ -10,6 +10,7 @@
       background-image: url("images/p3-bg.png");
       font-family: 'Roboto', 'Arial', sans-serif;
       height: 100vh;
+      margin: 0;
     }
 
     header {
@@ -20,6 +21,8 @@
       color: white;
     }
     footer {
+      height: 160px;
+      margin-top: -160px;
       width: calc(100% - 20px);
       padding: 10px;
       background: rgba(255, 255, 255, .55);
@@ -43,13 +46,14 @@
       flex-wrap: wrap;
     }
     main {
-      position: relative;
+      min-height: 90%;
 
     }
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding-top: 20px;
+      padding-bottom: 140px;
 
     }
     button {
@@ -68,6 +72,7 @@
     .hidden { display: none }
     #modal {
       position: fixed;
+      height: 100%;
       top: 0;
       left: 0;
       right: 0;
@@ -77,6 +82,8 @@
       border-radius: 10px;
     }
     .team {
+      overflow: auto;
+      height: 80%;
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
@@ -137,7 +144,7 @@
     <button id="show">Дізнатись більше про нас</button>
   </div>
   <div id="modal" class="hidden">
-    <h2>Наша супер-команда</h2>
+    <h2 style="margin-left: 10px">Наша супер-команда</h2>
     <div class="team">
       <img src="https://loremflickr.com/100/80?lock=1" class="person" data-name="Pauline R. Skiles">
       <img src="https://loremflickr.com/100/80?lock=2" class="person" data-name="Barbara T. Francisco">
