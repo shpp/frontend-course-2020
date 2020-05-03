@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Фабрика джинсів</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700&display=swap&subset=cyrillic-ext">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700&display=swap&subset=cyrillic-ext">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous"/>
   <style>
     body {
       background-image: url("images/p3-bg.png");
@@ -21,35 +23,50 @@
       z-index: 1;
       color: white;
     }
+
     footer {
-      min-height: 165px;
+      min-height: 160px;
       margin-top: -160px;
       width: calc(100% - 20px);
       padding: 10px;
       background: rgba(255, 255, 255, .55);
       color: black;
     }
-    nav { font-family: 'Roboto Slab', serif }
-    nav a { margin: 0 10px }
+
+    nav {
+      font-family: 'Roboto Slab', serif
+    }
+
+    nav a {
+      margin: 0 10px
+    }
+
     a {
       line-height: 150%;
       text-decoration: none;
       color: inherit;
     }
-    a:hover { text-decoration: underline }
+
+    a:hover {
+      text-decoration: underline
+    }
+
     a.active {
       text-decoration: underline;
       font-weight: bold;
     }
+
     .row {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
     }
+
     main {
       min-height: 90%;
     }
+
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -57,6 +74,7 @@
       padding-bottom: 140px;
 
     }
+
     button {
       width: 250px;
       display: block;
@@ -66,11 +84,16 @@
       text-align: center;
       border: none;
     }
+
     button:hover {
       cursor: pointer;
       background-color: #eeeeee;
     }
-    .hidden { display: none }
+
+    .hidden {
+      display: none
+    }
+
     #modal {
       position: fixed;
       height: 100%;
@@ -82,6 +105,12 @@
       background-color: white;
       border-radius: 10px;
     }
+
+    #modal h2 {
+      margin-left: 10px;
+      color: #222222;
+    }
+
     .team {
       overflow: auto;
       height: 80%;
@@ -89,12 +118,14 @@
       justify-content: space-evenly;
       flex-wrap: wrap;
     }
+
     .person {
       width: 150px;
       height: 150px;
-      margin-bottom: 20px;
+      margin: 10px 10px 20px;
       border-radius: 50%;
     }
+
     footer nav {
       display: flex;
       flex-direction: column;
@@ -109,6 +140,23 @@
       background: transparent;
       border: none;
     }
+
+    .imgContainer {
+      border: none;
+      display: inline-block;
+    }
+
+    .dataName {
+      border: none;
+      color: #222222;
+      text-align: center;
+      display: none;
+    }
+
+    .imgContainer:hover .dataName {
+      display: block;
+    }
+
   </style>
 </head>
 <body>
@@ -129,10 +177,12 @@
       animi cumque doloribus error fugit inventore, nemo numquam quo repudiandae suscipit ut voluptates. Asperiores
       laudantium quos soluta!
     </div>
-    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo officiis
+    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo
+      officiis
       placeat porro possimus reiciendis rem rerum saepe sapiente sed sint sunt ullam ut, voluptate!
     </div>
-    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt non
+    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt
+      non
       nostrum nulla odio perspiciatis quidem quisquam rerum, sed similique tenetur unde? Accusamus, numquam, quisquam?
     </div>
     <div>Cum quam repellendus vero vitae. Asperiores assumenda dolorem illum minus ullam, veritatis voluptatum. Commodi
@@ -145,10 +195,48 @@
       animi cumque doloribus error fugit inventore, nemo numquam quo repudiandae suscipit ut voluptates. Asperiores
       laudantium quos soluta!
     </div>
-    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo officiis
+    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo
+      officiis
       placeat porro possimus reiciendis rem rerum saepe sapiente sed sint sunt ullam ut, voluptate!
     </div>
-    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt non
+    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt
+      non
+      nostrum nulla odio perspiciatis quidem quisquam rerum, sed similique tenetur unde? Accusamus, numquam, quisquam?
+    </div>
+    <div>Cum quam repellendus vero vitae. Asperiores assumenda dolorem illum minus ullam, veritatis voluptatum. Commodi
+      dolorem et incidunt reiciendis rem. Enim esse est libero optio reiciendis sequi, sint soluta ullam ut?
+    </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad expedita ipsa nemo officiis, quidem soluta!
+      Blanditiis consequuntur et id, illo iste libero minima molestias pariatur recusandae, reiciendis unde vero vitae!
+    </div>
+    <div>Adipisci aspernatur assumenda consequuntur eos et illum maiores natus recusandae repudiandae temporibus. Alias
+      animi cumque doloribus error fugit inventore, nemo numquam quo repudiandae suscipit ut voluptates. Asperiores
+      laudantium quos soluta!
+    </div>
+    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo
+      officiis
+      placeat porro possimus reiciendis rem rerum saepe sapiente sed sint sunt ullam ut, voluptate!
+    </div>
+    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt
+      non
+      nostrum nulla odio perspiciatis quidem quisquam rerum, sed similique tenetur unde? Accusamus, numquam, quisquam?
+    </div>
+    <div>Cum quam repellendus vero vitae. Asperiores assumenda dolorem illum minus ullam, veritatis voluptatum. Commodi
+      dolorem et incidunt reiciendis rem. Enim esse est libero optio reiciendis sequi, sint soluta ullam ut?
+    </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad expedita ipsa nemo officiis, quidem soluta!
+      Blanditiis consequuntur et id, illo iste libero minima molestias pariatur recusandae, reiciendis unde vero vitae!
+    </div>
+    <div>Adipisci aspernatur assumenda consequuntur eos et illum maiores natus recusandae repudiandae temporibus. Alias
+      animi cumque doloribus error fugit inventore, nemo numquam quo repudiandae suscipit ut voluptates. Asperiores
+      laudantium quos soluta!
+    </div>
+    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo
+      officiis
+      placeat porro possimus reiciendis rem rerum saepe sapiente sed sint sunt ullam ut, voluptate!
+    </div>
+    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt
+      non
       nostrum nulla odio perspiciatis quidem quisquam rerum, sed similique tenetur unde? Accusamus, numquam, quisquam?
     </div>
     <div>Cum quam repellendus vero vitae. Asperiores assumenda dolorem illum minus ullam, veritatis voluptatum. Commodi
@@ -158,34 +246,94 @@
   </div>
   <div id="modal" class="hidden">
 
-
-    <button class="hide" id="closeButton"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNiIgaWQ9InN2ZzIiIHZlcnNpb249IjEuMSIgd2lkdGg9IjE2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcyBpZD0iZGVmczQiLz48ZyBpZD0ibGF5ZXIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0xMDM2LjM2MjIpIj48cGF0aCBkPSJtIDIsMTA1MC4zNjIyIDEyLC0xMiIgaWQ9InBhdGgyOTg1IiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmUiLz48cGF0aCBkPSJtIDIsMTAzOC4zNjIyIDEyLDEyIiBpZD0icGF0aDI5ODUtMSIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lIi8+PC9nPjwvc3ZnPg==">
+    <button class="hide" id="closeButton"><img
+      src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNiIgaWQ9InN2ZzIiIHZlcnNpb249IjEuMSIgd2lkdGg9IjE2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcyBpZD0iZGVmczQiLz48ZyBpZD0ibGF5ZXIxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0xMDM2LjM2MjIpIj48cGF0aCBkPSJtIDIsMTA1MC4zNjIyIDEyLC0xMiIgaWQ9InBhdGgyOTg1IiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmUiLz48cGF0aCBkPSJtIDIsMTAzOC4zNjIyIDEyLDEyIiBpZD0icGF0aDI5ODUtMSIgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLWRhc2hhcnJheTpub25lIi8+PC9nPjwvc3ZnPg==">
     </button>
-    <h2 style="margin-left: 10px">Наша супер-команда</h2>
-      <div class="team">
-      <img src="https://loremflickr.com/100/80?lock=1" class="person" data-name="Pauline R. Skiles">
-      <img src="https://loremflickr.com/100/80?lock=2" class="person" data-name="Barbara T. Francisco">
-      <img src="https://loremflickr.com/100/80?lock=3" class="person" data-name="Anna R. Jones">
-      <img src="https://loremflickr.com/100/80?lock=4" class="person" data-name="Ralph G. Gardner">
-      <img src="https://loremflickr.com/100/80?lock=5" class="person" data-name="Brain A. Prim">
-      <img src="https://loremflickr.com/100/80?lock=6" class="person" data-name="George M. Proffitt">
-      <img src="https://loremflickr.com/100/80?lock=7" class="person" data-name="Karen S. Carter">
-      <img src="https://loremflickr.com/100/80?lock=8" class="person" data-name="James P. Russo">
-      <img src="https://loremflickr.com/100/80?lock=9" class="person" data-name="Rebecca J. Giordano">
-      <img src="https://loremflickr.com/100/80?lock=10" class="person" data-name="Thomas P. Swett">
-      <img src="https://loremflickr.com/100/80?lock=11" class="person" data-name="Tiffany N. Gardner">
-      <img src="https://loremflickr.com/100/80?lock=12" class="person" data-name="Jessica D. Musgrove">
-      <img src="https://loremflickr.com/100/80?lock=13" class="person" data-name="Henry B. Johnson">
-      <img src="https://loremflickr.com/100/80?lock=14" class="person" data-name="Edward T. Tovar">
-      <img src="https://loremflickr.com/100/80?lock=15" class="person" data-name="Jacqueline G. Robles">
-      <img src="https://loremflickr.com/100/80?lock=16" class="person" data-name="Betty D. Phillips">
-      <img src="https://loremflickr.com/100/80?lock=17" class="person" data-name="William C. Baker">
-      <img src="https://loremflickr.com/100/80?lock=18" class="person" data-name="Lauren D. Baize">
-      <img src="https://loremflickr.com/100/80?lock=19" class="person" data-name="Terry S. Nelson">
-      <img src="https://loremflickr.com/100/80?lock=20" class="person" data-name="Dorothy D. Battaglia">
+    <h2>Наша супер-команда</h2>
+    <div class="team">
+      <div class="imgContainer">
+        <img src="https://loremflickr.com/100/80?lock=1" class="person" data-name="Pauline R. Skiles">
+        <div class="dataName">Pauline R. Skiles</div>
+      </div>
+      <div class="imgContainer">
+        <img src="https://loremflickr.com/100/80?lock=2" class="person" data-name="Barbara T. Francisco">
+        <div class="dataName">Barbara T. Francisco</div>
+      </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=3" class="person" data-name="Anna R. Jones">
+          <div class="dataName">Anna R. Jones</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=4" class="person" data-name="Ralph G. Gardner">
+          <div class="dataName">Ralph G. Gardner</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=5" class="person" data-name="Brain A. Prim">
+          <div class="dataName">Brain A. Prim</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=6" class="person" data-name="George M. Proffitt">
+          <div class="dataName">George M. Proffitt</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=7" class="person" data-name="Karen S. Carter">
+          <div class="dataName">Karen S. Carter</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=8" class="person" data-name="James P. Russo">
+          <div class="dataName">James P. Russo</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=9" class="person" data-name="Rebecca J. Giordano">
+          <div class="dataName">Rebecca J. Giordano</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=10" class="person" data-name="Thomas P. Swett">
+          <div class="dataName">Thomas P. Swett</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=11" class="person" data-name="Tiffany N. Gardner">
+          <div class="dataName">Tiffany N. Gardner</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=12" class="person" data-name="Jessica D. Musgrove">
+          <div class="dataName">Jessica D. Musgrove</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=13" class="person" data-name="Henry B. Johnson">
+          <div class="dataName">Henry B. Johnson</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=14" class="person" data-name="Edward T. Tovar">
+          <div class="dataName">Edward T. Tovar</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=15" class="person" data-name="Jacqueline G. Robles">
+          <div class="dataName">Jacqueline G. Robles</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=16" class="person" data-name="Betty D. Phillips">
+          <div class="dataName">Betty D. Phillips</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=17" class="person" data-name="William C. Baker">
+          <div class="dataName">William C. Baker</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=18" class="person" data-name="Lauren D. Baize">
+          <div class="dataName">Lauren D. Baize</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=19" class="person" data-name="Terry S. Nelson">
+          <div class="dataName">Terry S. Nelson</div>
+        </div>
+        <div class="imgContainer">
+          <img src="https://loremflickr.com/100/80?lock=20" class="person" data-name="Dorothy D. Battaglia">
+          <div class="dataName">Dorothy D. Battaglia</div>
+        </div>
+      </div>
+      <button class="hide">Крута у вас команда!</button>
     </div>
-    <button class="hide">Крута у вас команда!</button>
-  </div>
 </main>
 <footer>
   <div class="row">
@@ -210,10 +358,10 @@
   <p>&copy; 2020 <a href="https://programming.kr.ua">Ш++</a>.</p>
 </footer>
 <script>
-    /*
-     Please never ever look at this script while you are learning at level 1.
-     You _don't need_ this for completing the task.
-   */
+  /*
+   Please never ever look at this script while you are learning at level 1.
+   You _don't need_ this for completing the task.
+ */
   show.onclick = () => modal.classList.remove("hidden");
   [...document.querySelectorAll('.hide')].forEach(h => h.onclick = () => modal.classList.add("hidden"));
 </script>
