@@ -3,50 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <title>Фабрика джинсів</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700&display=swap&subset=cyrillic-ext">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:400,700&display=swap&subset=cyrillic-ext">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous"/>
   <style>
     body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
       background-image: url("images/p3-bg.png");
       font-family: 'Roboto', 'Arial', sans-serif;
+      color: aliceblue;
+      margin: 0;
     }
+
     header {
-      position: fixed;
       width: calc(100% - 40px);
       padding: 20px;
       background: #222222;
       z-index: 1;
       color: white;
     }
+
     footer {
-      padding: 20px 100px;
+      display: flex;
+      width: calc(100% - 20px);
+      padding: 10px;
       background: rgba(255, 255, 255, .55);
+      color: black;
     }
-    nav { font-family: 'Roboto Slab', serif }
-    nav a { margin: 0 10px }
+
+    nav {
+      font-family: 'Roboto Slab', serif
+    }
+
+    nav a {
+      margin: 0 10px
+    }
+
     a {
       line-height: 150%;
       text-decoration: none;
       color: inherit;
     }
-    a:hover { text-decoration: underline }
+
+    a:hover {
+      text-decoration: underline
+    }
+
     a.active {
       text-decoration: underline;
       font-weight: bold;
     }
+
     .row {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    main { position: relative }
+
+    main {
+      position: relative;
+    }
+
     .container {
       max-width: 900px;
       margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 140px;
     }
+
     button {
-      width: 250px;
       display: block;
       margin: 30px auto;
       padding: 10px 20px;
@@ -54,13 +84,20 @@
       text-align: center;
       border: none;
     }
+
     button:hover {
       cursor: pointer;
       background-color: #eeeeee;
     }
-    .hidden { display: none }
+
+    .hidden {
+      display: none
+    }
+
     #modal {
+      z-index: 2;
       position: fixed;
+      height: 100%;
       top: 0;
       left: 0;
       right: 0;
@@ -69,19 +106,58 @@
       background-color: white;
       border-radius: 10px;
     }
+
+    #modal h2 {
+      margin-left: 10px;
+      color: #222222;
+    }
+
     .team {
+      overflow: auto;
+      height: 80%;
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
     }
+
     .person {
-      width: 26%;
-      margin-bottom: 20px;
+      width: 150px;
+      height: 150px;
+      margin: 10px 10px 30px 30px;
+      border-radius: 50%;
     }
+
     footer nav {
       display: flex;
       flex-direction: column;
     }
+
+    .close-button {
+      position: absolute;
+      left: 850px;
+      top: -30px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .close-button:active,
+    .close-button:hover,
+    .close-button:focus {
+      outline: none;
+     background: transparent;
+    }
+
+    [data-name]:hover::after {
+      content: attr(data-name);
+      position: relative;
+      top: -20px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      color: #222222;
+    }
+
   </style>
 </head>
 <body>
@@ -102,10 +178,66 @@
       animi cumque doloribus error fugit inventore, nemo numquam quo repudiandae suscipit ut voluptates. Asperiores
       laudantium quos soluta!
     </div>
-    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo officiis
+    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo
+      officiis
       placeat porro possimus reiciendis rem rerum saepe sapiente sed sint sunt ullam ut, voluptate!
     </div>
-    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt non
+    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt
+      non
+      nostrum nulla odio perspiciatis quidem quisquam rerum, sed similique tenetur unde? Accusamus, numquam, quisquam?
+    </div>
+    <div>Cum quam repellendus vero vitae. Asperiores assumenda dolorem illum minus ullam, veritatis voluptatum. Commodi
+      dolorem et incidunt reiciendis rem. Enim esse est libero optio reiciendis sequi, sint soluta ullam ut?
+    </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad expedita ipsa nemo officiis, quidem soluta!
+      Blanditiis consequuntur et id, illo iste libero minima molestias pariatur recusandae, reiciendis unde vero vitae!
+    </div>
+    <div>Adipisci aspernatur assumenda consequuntur eos et illum maiores natus recusandae repudiandae temporibus. Alias
+      animi cumque doloribus error fugit inventore, nemo numquam quo repudiandae suscipit ut voluptates. Asperiores
+      laudantium quos soluta!
+    </div>
+    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo
+      officiis
+      placeat porro possimus reiciendis rem rerum saepe sapiente sed sint sunt ullam ut, voluptate!
+    </div>
+    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt
+      non
+      nostrum nulla odio perspiciatis quidem quisquam rerum, sed similique tenetur unde? Accusamus, numquam, quisquam?
+    </div>
+    <div>Cum quam repellendus vero vitae. Asperiores assumenda dolorem illum minus ullam, veritatis voluptatum. Commodi
+      dolorem et incidunt reiciendis rem. Enim esse est libero optio reiciendis sequi, sint soluta ullam ut?
+    </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad expedita ipsa nemo officiis, quidem soluta!
+      Blanditiis consequuntur et id, illo iste libero minima molestias pariatur recusandae, reiciendis unde vero vitae!
+    </div>
+    <div>Adipisci aspernatur assumenda consequuntur eos et illum maiores natus recusandae repudiandae temporibus. Alias
+      animi cumque doloribus error fugit inventore, nemo numquam quo repudiandae suscipit ut voluptates. Asperiores
+      laudantium quos soluta!
+    </div>
+    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo
+      officiis
+      placeat porro possimus reiciendis rem rerum saepe sapiente sed sint sunt ullam ut, voluptate!
+    </div>
+    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt
+      non
+      nostrum nulla odio perspiciatis quidem quisquam rerum, sed similique tenetur unde? Accusamus, numquam, quisquam?
+    </div>
+    <div>Cum quam repellendus vero vitae. Asperiores assumenda dolorem illum minus ullam, veritatis voluptatum. Commodi
+      dolorem et incidunt reiciendis rem. Enim esse est libero optio reiciendis sequi, sint soluta ullam ut?
+    </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad expedita ipsa nemo officiis, quidem soluta!
+      Blanditiis consequuntur et id, illo iste libero minima molestias pariatur recusandae, reiciendis unde vero vitae!
+    </div>
+    <div>Adipisci aspernatur assumenda consequuntur eos et illum maiores natus recusandae repudiandae temporibus. Alias
+      animi cumque doloribus error fugit inventore, nemo numquam quo repudiandae suscipit ut voluptates. Asperiores
+      laudantium quos soluta!
+    </div>
+    <div>Accusantium aliquid aspernatur commodi corporis dolorem ea ex expedita fugit illo ipsa iusto magnam nemo
+      officiis
+      placeat porro possimus reiciendis rem rerum saepe sapiente sed sint sunt ullam ut, voluptate!
+    </div>
+    <div>Ab accusamus adipisci, asperiores autem culpa eveniet ex explicabo iste iure, laboriosam magni modi nesciunt
+      non
       nostrum nulla odio perspiciatis quidem quisquam rerum, sed similique tenetur unde? Accusamus, numquam, quisquam?
     </div>
     <div>Cum quam repellendus vero vitae. Asperiores assumenda dolorem illum minus ullam, veritatis voluptatum. Commodi
@@ -114,28 +246,73 @@
     <button id="show">Дізнатись більше про нас</button>
   </div>
   <div id="modal" class="hidden">
+
+    <button class="hide close-button">X</button>
     <h2>Наша супер-команда</h2>
+
     <div class="team">
-      <img src="https://loremflickr.com/100/80?lock=1" class="person" data-name="Pauline R. Skiles">
-      <img src="https://loremflickr.com/100/80?lock=2" class="person" data-name="Barbara T. Francisco">
-      <img src="https://loremflickr.com/100/80?lock=3" class="person" data-name="Anna R. Jones">
-      <img src="https://loremflickr.com/100/80?lock=4" class="person" data-name="Ralph G. Gardner">
-      <img src="https://loremflickr.com/100/80?lock=5" class="person" data-name="Brain A. Prim">
-      <img src="https://loremflickr.com/100/80?lock=6" class="person" data-name="George M. Proffitt">
-      <img src="https://loremflickr.com/100/80?lock=7" class="person" data-name="Karen S. Carter">
-      <img src="https://loremflickr.com/100/80?lock=8" class="person" data-name="James P. Russo">
-      <img src="https://loremflickr.com/100/80?lock=9" class="person" data-name="Rebecca J. Giordano">
-      <img src="https://loremflickr.com/100/80?lock=10" class="person" data-name="Thomas P. Swett">
-      <img src="https://loremflickr.com/100/80?lock=11" class="person" data-name="Tiffany N. Gardner">
-      <img src="https://loremflickr.com/100/80?lock=12" class="person" data-name="Jessica D. Musgrove">
-      <img src="https://loremflickr.com/100/80?lock=13" class="person" data-name="Henry B. Johnson">
-      <img src="https://loremflickr.com/100/80?lock=14" class="person" data-name="Edward T. Tovar">
-      <img src="https://loremflickr.com/100/80?lock=15" class="person" data-name="Jacqueline G. Robles">
-      <img src="https://loremflickr.com/100/80?lock=16" class="person" data-name="Betty D. Phillips">
-      <img src="https://loremflickr.com/100/80?lock=17" class="person" data-name="William C. Baker">
-      <img src="https://loremflickr.com/100/80?lock=18" class="person" data-name="Lauren D. Baize">
-      <img src="https://loremflickr.com/100/80?lock=19" class="person" data-name="Terry S. Nelson">
-      <img src="https://loremflickr.com/100/80?lock=20" class="person" data-name="Dorothy D. Battaglia">
+
+      <div data-name="Pauline R. Skiles">
+        <img src="https://loremflickr.com/100/80?lock=1" class="person" alt="our team member Pauline R. Skiles">
+      </div>
+
+      <div data-name="Barbara T. Francisco">
+        <img src="https://loremflickr.com/100/80?lock=2" class="person" alt="our team member Barbara T. Francisco">
+      </div>
+      <div data-name="Anna R. Jones">
+        <img src="https://loremflickr.com/100/80?lock=3" class="person" alt="our team member Anna R. Jones">
+      </div>
+      <div data-name="Ralph G. Gardner">
+        <img src="https://loremflickr.com/100/80?lock=4" class="person" alt="our team member Ralph G. Gardner">
+      </div>
+      <div data-name="Brain A. Prim">
+        <img src="https://loremflickr.com/100/80?lock=5" class="person" alt="our team member Brain A. Prim">
+      </div>
+      <div data-name="George M. Proffitt">
+        <img src="https://loremflickr.com/100/80?lock=6" class="person" alt="our team member George M. Proffitt">
+      </div>
+      <div data-name="Karen S. Carter">
+        <img src="https://loremflickr.com/100/80?lock=7" class="person" alt="our team member Karen S. Carter">
+      </div>
+      <div data-name="James P. Russo">
+        <img src="https://loremflickr.com/100/80?lock=8" class="person" alt="our team member James P. Russo">
+      </div>
+      <div data-name="Rebecca J. Giordano">
+        <img src="https://loremflickr.com/100/80?lock=9" class="person" alt="our team member Rebecca J. Giordano">
+      </div>
+      <div data-name="Thomas P. Swett">
+        <img src="https://loremflickr.com/100/80?lock=10" class="person" alt="our team member Thomas P. Swett">
+      </div>
+      <div data-name="Tiffany N. Gardner">
+        <img src="https://loremflickr.com/100/80?lock=11" class="person" alt="our team member Tiffany N. Gardner">
+      </div>
+      <div data-name="Jessica D. Musgrove">
+        <img src="https://loremflickr.com/100/80?lock=12" class="person" alt="our team member Jessica D. Musgrove">
+      </div>
+      <div data-name="Henry B. Johnson">
+        <img src="https://loremflickr.com/100/80?lock=13" class="person" alt="our team member Henry B. Johnson">
+      </div>
+      <div data-name="Edward T. Tovar">
+        <img src="https://loremflickr.com/100/80?lock=14" class="person" alt="our team member Edward T. Tovar">
+      </div>
+      <div data-name="Jacqueline G. Robles">
+        <img src="https://loremflickr.com/100/80?lock=15" class="person" alt="our team member Jacqueline G. Robles">
+      </div>
+      <div data-name="Betty D. Phillips">
+        <img src="https://loremflickr.com/100/80?lock=16" class="person" alt="our team member Betty D. Phillips">
+      </div>
+      <div data-name="William C. Baker">
+        <img src="https://loremflickr.com/100/80?lock=17" class="person" alt="our team member William C. Baker">
+      </div>
+      <div data-name="Lauren D. Baize">
+        <img src="https://loremflickr.com/100/80?lock=18" class="person" alt="our team member Lauren D. Baize">
+      </div>
+      <div data-name="Terry S. Nelson">
+        <img src="https://loremflickr.com/100/80?lock=19" class="person" alt="our team member Terry S. Nelson">
+      </div>
+      <div data-name="Dorothy D. Battaglia">
+        <img src="https://loremflickr.com/100/80?lock=20" class="person" alt="our team member Dorothy D. Battaglia">
+      </div>
     </div>
     <button class="hide">Крута у вас команда!</button>
   </div>
@@ -163,10 +340,10 @@
   <p>&copy; 2020 <a href="https://programming.kr.ua">Ш++</a>.</p>
 </footer>
 <script>
-    /*
-     Please never ever look at this script while you are learning at level 1.
-     You _don't need_ this for completing the task.
-   */
+  /*
+   Please never ever look at this script while you are learning at level 1.
+   You _don't need_ this for completing the task.
+ */
   show.onclick = () => modal.classList.remove("hidden");
   [...document.querySelectorAll('.hide')].forEach(h => h.onclick = () => modal.classList.add("hidden"));
 </script>

@@ -1,0 +1,35 @@
+.bg-darkgray {
+  background-color: darkgray;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+h1 {
+  padding: 1.1rem;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.sidebar .nav-link {
+  color: black;
+  font-size: large;
+}
+
+/* On screens that are 600px wide or less, use default font-size */
+@media all and (max-width: 600px) {
+  .sidebar .nav-link {
+    color: black;
+  }
+}
+
+.sidebar .nav-link.active {
+  color: blue;
+}
+
+.align-text-right {
+  text-align: right;
+}

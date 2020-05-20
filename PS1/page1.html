@@ -1,53 +1,153 @@
-<body style="overflow: hidden;">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<img src="./images/pasta.jpg" width="100%" style="position: absolute; z-index: -1">
-<header align="middle">
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <title>SPAGHETTI.ua - Макарони додому</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="SPAGHETTI.ua, купити, спагетті, лапша, вермішель, макарони, безкоштовна доставка,
+  Інтернет-магазин, Интернет-магазин, купить, макароны, спагетти, вермишель, бесплатная доставка">
+  <meta name="robots" content="index, follow" />
+
+  <!--Open graph meta-tags-->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/page1.html">
+  <meta property="og:title" content="SPAGHETTI.ua - Макарони додому">
+  <meta property="og:description" content="SPAGHETTI.ua - Макарони додому Безкоштовна доставка в радіусі 5км!">
+  <meta property="og:url" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/page1.html">
+  <meta property="og:locale" content="ua_UA">
+  <meta property="og:image" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/images/pasta.jpg">
+  <meta property="og:image:width" content="968">
+  <meta property="og:image:height" content="504">
+
+  <!--Twitter meta-tags-->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SPAGHETTI.ua - Макарони додому">
+  <meta name="twitter:description" content="SPAGHETTI.ua - Макарони додому Безкоштовна доставка в радіусі 5км!">
+  <meta name="twitter:image:src" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/images/pasta.jpg">
+  <meta name="twitter:url" content="https://dmitrishinbv.github.io/frontend-course-2020/PS1/page1.html">
+  <meta name="twitter:domain" content="dmitrishinbv.github.io">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@...">
+
+  <!--Favicon tags-->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+  <link rel="manifest" href="ico/manifest.json">
+
+  <style>
+
+    body {
+      overflow: hidden;
+    }
+
+    .background {
+      top: 0;
+      left: 0;
+      position: fixed;
+      z-index: -1;
+      opacity: 0.8;
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .button {
+      display: inline-block;
+      height: 30px;
+      width: 180px;
+      border-radius: 5px;
+      vertical-align: bottom;
+      text-align: center;
+      line-height: 30px;
+      background: white;
+    }
+
+    img {
+      margin-right: 5px;
+      vertical-align: bottom;
+    }
+
+
+    .shadow {
+      text-shadow: 3px 3px black;
+    }
+
+    .heading {
+      color: #c8f6a8;
+    }
+
+    .whiteText {
+      color: white;
+    }
+
+    .button:hover {
+      background-color: lightgrey;
+      cursor: pointer
+    }
+
+    main {
+      text-align: center;
+      margin-top: 5%;
+      font-size: 2rem;
+      color: white;
+    }
+
+    footer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, .7);
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+    footer div {
+      display: inline-block;
+      margin: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+<img class="background" src="./images/pasta.jpg" alt="pasta image">
+<header>
   <br>
-  <h1 style="color: white">SPAGHETTI.ua</h1>
+  <h1 class="shadow whiteText">SPAGHETTI.ua</h1>
   <hr>
-  <div class="button">Меню</div>
-  <div class="button">Доставка та оплата</div>
-  <div class="button">Замовити</div>
+  <button class="button">Меню</button>
+  <button class="button">Доставка та оплата</button>
+  <button class="button">Замовити</button>
 </header>
 <main>
-  <h1>Макарони додому</h1>
-  <h3>Безкоштовна доставка в радіусі 5км!</h3>
+  <h1 class="shadow heading">Макарони додому</h1>
+  <h3 class="shadow heading">Безкоштовна доставка в радіусі 5км!</h3>
 </main>
 <footer>
-  <div><img width="20" src="./images/phone.svg">+380 98 765 43 21</div>
-  <div><img width="20" src="./images/email.svg">buy@spaghetti.ua</div>
+  <div><img width="20" src="./images/phone.svg" alt="phone icon">
+    <a href="tel:+380987654321">+380 98 765 43 21</a></div>
+  <div><img width="20" src="./images/email.svg" alt="email icon">
+    <a href="mailto:buy@spaghetti.ua">buy@spaghetti.ua</a></div>
 </footer>
-<style>
-  .button {
-    display: inline-block;
-    height: 30px;
-    width: 90px;
-    vertical-align: bottom;
-    text-align: center;
-    line-height: 30px;
-    background: white;
-  }
 
-  .button:hover { background-color: lightgrey; }
-
-  main {
-    text-align: center;
-    margin-top: 150px;
-    font-size: 2rem;
-    color: white;
-  }
-
-  footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, .7);
-    text-align: center;
-  }
-
-  footer div {
-    display: inline-block;
-    margin: 10px;
-  }
-</style>
 </body>
+</html>
